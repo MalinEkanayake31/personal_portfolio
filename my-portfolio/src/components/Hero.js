@@ -71,7 +71,7 @@ const Hero = () => {
             transition={{ delay: 0.6 }}
             className="text-xl md:text-2xl text-text-secondary max-w-3xl mx-auto leading-relaxed"
           >
-            CS Undergraduate @ UCSC • AI/ML & GenAI Enthusiast • CIMA Certified
+            CS Undergraduate @ UCSC • AI/ML & GenAI Enthusiast • CIMA Student
           </motion.p>
 
           {/* One-liner */}
