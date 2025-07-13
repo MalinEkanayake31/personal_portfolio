@@ -20,9 +20,9 @@ const Footer = () => {
             <p className="text-text-secondary">
               © {currentYear} Malin Ekanayake. All rights reserved.
             </p>
-            <p className="text-text-muted text-sm mt-1">
+            {/* <p className="text-text-muted text-sm mt-1">
               Made with <Heart className="inline w-4 h-4 text-red-500" /> using React & Tailwind
-            </p>
+            </p> */}
           </motion.div>
 
           {/* Social Links */}
