@@ -48,64 +48,88 @@ const Projects = () => {
           viewport={{ once: true }}
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          {projectData.projects.map((project, index) => (
-            <motion.div
-              key={project.id}
-              variants={cardVariants}
-              whileHover={{ y: -10, scale: 1.02 }}
-              className="group"
-            >
-              <div className="bg-primary-light rounded-3xl p-6 h-full border border-primary-dark/20 hover:border-accent/30 transition-all duration-300 hover:shadow-2xl">
-                {/* Project Header */}
-                <div className="mb-4">
-                  <h3 className="text-xl font-bold text-text-primary mb-2 group-hover:text-accent transition-colors duration-300">
-                    {project.title}
-                  </h3>
-                  <p className="text-text-secondary text-sm leading-relaxed">
-                    {project.description}
-                  </p>
-                </div>
+          {projectData.projects.map((project, index) => {
+            // Dynamically import image from src/data or src/images
+            let imageSrc;
+            try {
+              imageSrc = require(`../data/${project.image}`);
+            } catch (e1) {
+              try {
+                imageSrc = require(`../images/${project.image}`);
+              } catch (e2) {
+                imageSrc = null;
+              }
+            }
+            return (
+              <motion.div
+                key={project.id}
+                variants={cardVariants}
+                whileHover={{ y: -10, scale: 1.02 }}
+                className="group"
+              >
+                <div className="bg-primary-light rounded-3xl p-6 h-full border border-primary-dark/20 hover:border-accent/30 transition-all duration-300 hover:shadow-2xl">
+                  {/* Project Image */}
+                  {imageSrc && (
+                    <div className="mb-4 flex justify-center">
+                      <img
+                        src={imageSrc}
+                        alt={project.title + ' screenshot'}
+                        className="rounded-2xl shadow-lg object-cover w-full h-40 md:h-48 lg:h-40 xl:h-48 max-w-xs mx-auto border border-primary-dark/10"
+                        style={{ background: '#f3f4f6' }}
+                      />
+                    </div>
+                  )}
+                  {/* Project Header */}
+                  <div className="mb-4">
+                    <h3 className="text-xl font-bold text-text-primary mb-2 group-hover:text-accent transition-colors duration-300">
+                      {project.title}
+                    </h3>
+                    <p className="text-text-secondary text-sm leading-relaxed">
+                      {project.description}
+                    </p>
+                  </div>
 
-                {/* Tech Stack */}
-                <div className="mb-6">
-                  <div className="flex flex-wrap gap-2">
-                    {project.techStack.map((tech, techIndex) => (
-                      <span
-                        key={techIndex}
-                        className="px-3 py-1 bg-accent/10 text-accent text-xs font-medium rounded-full border border-accent/20"
-                      >
-                        {tech}
-                      </span>
-                    ))}
+                  {/* Tech Stack */}
+                  <div className="mb-6">
+                    <div className="flex flex-wrap gap-2">
+                      {project.techStack.map((tech, techIndex) => (
+                        <span
+                          key={techIndex}
+                          className="px-3 py-1 bg-accent/10 text-accent text-xs font-medium rounded-full border border-accent/20"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Project Links */}
+                  <div className="flex justify-between items-center">
+                    <motion.a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="flex items-center space-x-2 text-accent hover:text-accent-light transition-colors duration-300"
+                    >
+                      <Github size={20} />
+                      <span className="text-sm font-medium">View Code</span>
+                    </motion.a>
+                    
+                    <motion.div
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="flex items-center space-x-2 text-text-muted hover:text-accent transition-colors duration-300 cursor-pointer"
+                    >
+                      <ExternalLink size={20} />
+                      <span className="text-sm font-medium">Demo</span>
+                    </motion.div>
                   </div>
                 </div>
-
-                {/* Project Links */}
-                <div className="flex justify-between items-center">
-                  <motion.a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="flex items-center space-x-2 text-accent hover:text-accent-light transition-colors duration-300"
-                  >
-                    <Github size={20} />
-                    <span className="text-sm font-medium">View Code</span>
-                  </motion.a>
-                  
-                  <motion.div
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="flex items-center space-x-2 text-text-muted hover:text-accent transition-colors duration-300 cursor-pointer"
-                  >
-                    <ExternalLink size={20} />
-                    <span className="text-sm font-medium">Demo</span>
-                  </motion.div>
-                </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            );
+          })}
         </motion.div>
 
         {/* View More Button */}

@@ -4,57 +4,57 @@
       "id": 1,
       "title": "ConstruxFlow",
       "description": "AI-powered Supply Chain Management system with predictive analytics and automated inventory optimization.",
-      "techStack": ["Python", "React", "FastAPI", "PostgreSQL", "scikit-learn"],
-      "github": "https://github.com/MalinEkanayake31/construxflow",
-      "image": "construxflow.jpg"
+      "techStack": ["Spring Boot","Python", "React", "FastAPI", "PostgreSQL", "scikit-learn"],
+      "github": "https://github.com/ConstruxFlow",
+      "image": "construxflow.png"
     },
     {
       "id": 2,
       "title": "AutoML Pipeline",
       "description": "Automated machine learning pipeline with SHAP explainability for model interpretability and feature importance analysis.",
-      "techStack": ["Python", "scikit-learn", "SHAP", "Streamlit", "Pandas"],
-      "github": "https://github.com/MalinEkanayake31/automl-pipeline",
-      "image": "automl.jpg"
+      "techStack": ["Python", "scikit-learn", "SHAP", "Streamlit", "Pandas","matplotlib","Docker"],
+      "github": "https://github.com/MalinEkanayake31/autoML_pipeline",
+      "image": "automl.jpeg"
     },
     {
       "id": 3,
       "title": "Grand Park Arena",
       "description": "PHP-based cricket management system with tournament scheduling, player statistics, and real-time score tracking.",
-      "techStack": ["PHP", "MySQL", "JavaScript", "Bootstrap", "jQuery"],
+      "techStack": ["PHP", "MySQL", "JavaScript", "HTML","CSS", "PHPMailer", "Stripe API"],
       "github": "https://github.com/MalinEkanayake31/grand-park-arena",
-      "image": "cricket.jpg"
+      "image": "cricket.jpeg"
     },
     {
       "id": 4,
       "title": "SIMAS AUTOQUEST",
       "description": "Full-stack car rental system with booking management, payment integration, and customer portal.",
-      "techStack": ["React", "Node.js", "MongoDB", "Stripe API", "Express"],
-      "github": "https://github.com/MalinEkanayake31/simas-autoquest",
-      "image": "car-rental.jpg"
+      "techStack": ["React", "Node.js", "MongoDB", "Tailwind CSS", "Express"],
+      "github": "https://github.com/MalinEkanayake31/Car-Rental-System",
+      "image": "car-rental.jpeg"
     },
     {
       "id": 5,
       "title": "Multi-Stock Predictor",
       "description": "LSTM-based stock price prediction system with Streamlit interface for real-time market analysis.",
-      "techStack": ["Python", "LSTM", "TensorFlow", "Streamlit", "Yahoo Finance"],
-      "github": "https://github.com/MalinEkanayake31/multi-stock-predictor",
-      "image": "stock-predictor.jpg"
+      "techStack": ["Python", "LSTM", "TensorFlow", "Streamlit", "Yahoo Finance","Seaborn"],
+      "github": "https://github.com/MalinEkanayake31/stock_price_predictor",
+      "image": "stock-predictor.jpeg"
     },
     {
       "id": 6,
       "title": "RAG Mental Health Chatbot",
       "description": "Retrieval-Augmented Generation chatbot for mental health support using Groq and LLaMA-3 models.",
-      "techStack": ["Python", "Groq", "LLaMA-3", "LangChain", "RAG"],
-      "github": "https://github.com/MalinEkanayake31/mental-health-chatbot",
-      "image": "chatbot.jpg"
+      "techStack": ["Python", "Groq", "LLaMA-3", "LangChain", "RAG","FastAPI","HuggingFace","ChromaDB"],
+      "github": "https://github.com/MalinEkanayake31/Mental-Health-Chatbot-",
+      "image": "chatbot.jpeg"
     },
     {
       "id": 7,
       "title": "Smart Energy IoT System",
       "description": "Arduino-based IoT system for energy monitoring with sensor data collection and real-time analytics.",
-      "techStack": ["Arduino", "C++", "IoT", "Sensors", "Python"],
+      "techStack": ["Arduino", "C++", "IoT", "Sensors"],
       "github": "https://github.com/MalinEkanayake31/smart-energy-iot",
-      "image": "iot.jpg"
+      "image": "iot.jpeg"
     }
   ]
 } 
